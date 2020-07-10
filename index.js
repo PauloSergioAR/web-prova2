@@ -9,11 +9,10 @@ inputs.forEach((element) => {
       value = value.substring(1)
 
       console.log(value.split("+"))
-      if(value.split("+").length > 0){
-        input.value = (parseInt(document.getElementById(value.split("+")[0]))) + (parseInt(document.getElementById(value.split("+")[1])))
-        console.log((parseInt(document.getElementById(value.split("+")[0]))) + (parseInt(document.getElementById(value.split("+")[1]))))
-      } else if (value.split("-").length > 0){
-        input.value = (parseInt(document.getElementById(value.split("-")[0]))) - (parseInt(document.getElementById(value.split("-")[1])))
+      if(value.split("+").length > 1){
+        input.value = (parseInt(document.getElementById(value.split("+")[0]).value)) + (parseInt(document.getElementById(value.split("+")[1]).value))
+      } else if (value.split("-").length > 1){
+        input.value = (parseInt(document.getElementById(value.split("-")[0]).value)) - (parseInt(document.getElementById(value.split("-")[1]).value))
       }
     }
   })
